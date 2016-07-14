@@ -1,0 +1,113 @@
+This is my testplan.txt
+So I have two different sceneriors
+Each scenerio consists of the executable and what is expected
+1.) ./index final.txt test.txt
+	This only contains one files so it will never get to the traversal of the directories.
+	That being said it will only contain file traces inside of final.txt.
+	test.txt includes the following:
+	hello this is my first token example for my program for my assignment
+	After execuction there will be a file called final.txt which includes:
+	{"list" :
+        {"assignment" : [
+                {test.txt: 1},
+        ]}
+        {"example" : [
+                {test.txt: 1},
+        ]}
+        {"first" : [
+                {test.txt: 1},
+        ]}
+        {"for" : [
+                {test.txt: 2},
+        ]}
+        {"hello" : [
+                {test.txt: 1},
+        ]}
+        {"is" : [
+                {test.txt: 1},
+        ]}
+        {"my" : [
+                {test.txt: 3},
+        ]}
+        {"program" : [
+                {test.txt: 1},
+        ]}
+        {"this" : [
+                {test.txt: 1},
+        ]}
+        {"token" : [
+                {test.txt: 1},
+        ]}
+
+]}
+
+2.) ./index jesse.txt practDir
+	This will traverse the directory. It contains three files and the output will be contained in jesse.txt
+	jesse.txt consists of:
+	 {"list" :
+        {"a" : [
+                {pracDir/file1.txt: 1},
+        ]}
+        {"again" : [
+                {pracDir/file2.txt: 1},
+        ]}
+        {"code" : [
+                {pracDir/insidetest/file3.txt: 1},
+        ]}
+        {"created" : [
+                {pracDir/file2.txt: 1},
+        ]}
+        {"creating" : [
+                {pracDir/insidetest/file3.txt: 1},
+        ]}
+        {"different" : [
+                {pracDir/file2.txt: 1},
+        ]}
+        {"do" : [
+                {pracDir/insidetest/file3.txt: 1},
+        ]}
+        {"dood" : [
+                {pracDir/file1.txt: 1},
+        ]}
+        {"enjoy" : [
+                {pracDir/insidetest/file3.txt: 1},
+        ]}
+        {"for" : [
+                {pracDir/file1.txt: 1},
+        ]}
+        {"have" : [
+                {pracDir/insidetest/file3.txt: 1},
+        ]}
+        {"hello" : [
+                {pracDir/file1.txt: 1},
+        ]}
+        {"i" : [
+                {pracDir/file2.txt: 1},
+        ]}
+        {"is" : [
+                {pracDir/file1.txt: 1},
+        ]}
+        {"my" : [
+                {pracDir/file1.txt: 2},
+                {pracDir/insidetest/file3.txt: 1}
+        ]}
+        {"program" : [
+                {pracDir/file1.txt: 1},
+        ]}
+        {"really" : [
+                {pracDir/insidetest/file3.txt: 1},
+        ]}
+        {"same" : [
+                {pracDir/file2.txt: 1},
+        ]}
+        {"test" : [
+                {pracDir/file1.txt: 1},
+        ]}
+        {"that" : [
+                {pracDir/file2.txt: 1},
+        ]}
+
+       }]
+
+3. ./index someFile pracD(not a file or directory)
+	Error: pracD is not a file or directory       

@@ -1,0 +1,40 @@
+Vamsi Anamaneni and Jesse Strivelli
+
+
+To test the program
+1) run make which produces the object files necessary.
+2) ./malloc
+
+in test.c 
+i put in the basic test cases, running make allows you to 
+see how the program handles the test cases.
+
+	int x;
+	free(&x);
+	printf("%s\n","+++++++++++++++++++++++++++++++++++++++++++" );
+	/*trying to free memory not malloced, free will be refused*/
+
+
+	char *p = (char*)malloc(200);
+	free(p+10);
+	printf("%s\n","+++++++++++++++++++++++++++++++++++++++++++" );
+	/*trying to free memory not returned from malloc, free will be refused*/
+
+
+	free(p);
+	free(p);
+	printf("%s\n","+++++++++++++++++++++++++++++++++++++++++++" );
+	/*double freeing, first free will be ok and second will be denied*/
+
+
+	p = (char*)malloc(100);
+	free(p);
+	p = (char*)malloc(100);
+	free(p);
+	/*is correct and will run fine*/
+
+	printf("%s\n","+++++++++++++++++++++++++++++++++++++++++++" );
+	char *q = (char*)malloc(300);
+	char *w = (char*)malloc(900);
+	/*withdrawing more than 1024 bytes, which is total of memory aviliable to allocate, the program will not allocated memory for w and gracefully exit.*/
+	printf("%s\n","+++++++++++++++++++++++++++++++++++++++++++" );

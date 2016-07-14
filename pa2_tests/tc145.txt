@@ -1,0 +1,8 @@
+
+Note: No expected output for test cases 1-5, if correct.
+
+Test case 1: Create an empty List, create an iterator, and then destroy them
+
+Note: No expected output for test cases 1-5, if correct.
+
+Test case 1: Create an empty List, create an iterator, and then destroy them

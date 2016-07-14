@@ -1,0 +1,39 @@
+Test #1:
+First we malloc integer values so we can throw them in the list.
+The numbers are inserted accordingly:
+34, 43, 6, 26, 41
+After they are inserted the list is sorted from largest to smallest as:
+43, 41, 34, 26, 6 
+
+Test #2:
+After all of the numbers from test 1 have been inserted and printed, we remove:
+34, 6
+The list then prints out:
+43, 41, 26
+
+Test #3:
+Now we create a new list that will insert doubles that we malloc
+The numbers are inserted respectively as:
+53.75, 67.3, 42.281, 42.111, 42.9018
+After insertion they are in order from largest to smallest as:
+67.300000, 53.750000, 42.901800, 42.281000, 42.111000
+
+Test#4:
+After the doubles are inserted in order we remove three doubles from the list:
+53.75, 42.281, 42.111
+The list then has:
+67.300000, 42.901800
+
+Test#5:
+Now we malloc char* or strings so we can insert them into the list as following:
+"hello", "world", "what are", "up to", "today"
+The list then is sorted as:
+"world", "what are", "up to", "today", "world"
+
+Test#6
+We then try to remove an item from the list that does not exists:
+"yo"
+The program then says:
+"We can't find the object"
+
+

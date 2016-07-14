@@ -1,0 +1,85 @@
+{"list" : 
+	{"a" : [
+		{pracdir/file1.txt: 1},
+	]}
+	{"again" : [
+		{pracdir/file2.txt: 1},
+	]}
+	{"code" : [
+		{pracdir/insidetest/file3.txt: 1},
+	]}
+	{"created" : [
+		{pracdir/file2.txt: 1},
+	]}
+	{"creating" : [
+		{pracdir/insidetest/file3.txt: 1},
+	]}
+	{"different" : [
+		{pracdir/file2.txt: 1},
+	]}
+	{"do" : [
+		{pracdir/insidetest/file3.txt: 1},
+	]}
+	{"dood" : [
+		{pracdir/file1.txt: 1},
+	]}
+	{"enjoy" : [
+		{pracdir/insidetest/file3.txt: 1},
+	]}
+	{"for" : [
+		{pracdir/file1.txt: 1},
+	]}
+	{"have" : [
+		{pracdir/insidetest/file3.txt: 1},
+	]}
+	{"hello" : [
+		{pracdir/file1.txt: 1},
+	]}
+	{"i" : [
+		{pracdir/file2.txt: 1},
+	]}
+	{"is" : [
+		{pracdir/file1.txt: 1},
+	]}
+	{"my" : [
+		{pracdir/file1.txt: 2},
+		{pracdir/insidetest/file3.txt: 1}
+	]}
+	{"program" : [
+		{pracdir/file1.txt: 1},
+	]}
+	{"really" : [
+		{pracdir/insidetest/file3.txt: 1},
+	]}
+	{"same" : [
+		{pracdir/file2.txt: 1},
+	]}
+	{"test" : [
+		{pracdir/file1.txt: 1},
+	]}
+	{"that" : [
+		{pracdir/file2.txt: 1},
+	]}
+	{"the" : [
+		{pracdir/file2.txt: 1},
+	]}
+	{"things" : [
+		{pracdir/insidetest/file3.txt: 1},
+	]}
+	{"third" : [
+		{pracdir/insidetest/file3.txt: 1},
+	]}
+	{"this" : [
+		{pracdir/file1.txt: 1},
+	]}
+	{"time" : [
+		{pracdir/insidetest/file3.txt: 1},
+	]}
+	{"to" : [
+		{pracdir/insidetest/file3.txt: 1},
+	]}
+	{"with" : [
+		{pracdir/insidetest/file3.txt: 1},
+	]}
+
+]}

@@ -1,0 +1,321 @@
+Test case 1
+
+Input     ./tokenizer "0.123 0xhello#@$"
+
+Expected Output:
+
+float "0.123"
+integer “0”
+word “xhello"
+pound "#"
+at "@"
+dollar sign "$"
+
+Output:
+
+float "0.123"
+integer "0"
+word "xhello"
+pound "#"
+at "@"
+dollar sign "$"
+
+
+
+
+
+Test case 2
+
+Input    ./tokenizer "0173"
+
+Expected Output:
+
+octal "0173"
+
+Output:
+
+octal "0173"
+
+
+
+Test case 3
+
+Input     ./tokenizer "[] [[[[[]]]]]"
+
+Expected Output:
+array element "[]"
+left bracket "["
+left bracket "["
+left bracket "["
+left bracket "["
+array element "[]"
+right bracket "]"
+right bracket "]"
+right bracket "]"
+right bracket "]"
+
+Output:
+
+array element "[]"
+left bracket "["
+left bracket "["
+left bracket "["
+left bracket "["
+array element "[]"
+right bracket "]"
+right bracket "]"
+right bracket "]"
+right bracket "]"
+
+
+
+
+
+
+Test case 4
+ 
+Input ./tokenizer
+
+Expected Output
+
+Invalid number of arguments
+
+Output:
+
+Invalid number of arguments
+
+
+
+Test case 5
+
+Input ./tokenizer "()()()()()"
+
+Expected Output
+function “()”
+function “()”
+function “()”
+function “()”
+function “()”
+
+Output:
+
+function "()"
+function "()"
+function "()"
+function "()"
+function "()"
+
+
+Test case 6
+
+Input ./tokenizer "@#$%^&*()_-+==-0987654321"
+
+Expected Output
+
+at "@"
+pound "#"
+dollar sign "$"
+modulus "%"
+exclusive or "^"
+bitwise and "&"
+multiply "*"
+function "()"
+underscore "_"
+minus "-"
+plus equals "+="
+equals "="
+minus "-"
+integer "0"
+integer "987654321"
+
+Output:
+
+at "@"
+pound "#"
+dollar sign "$"
+modulus "%"
+exclusive or "^"
+bitwise and "&"
+multiply "*"
+function "()"
+underscore "_"
+minus "-"
+plus equals "+="
+equals "="
+minus "-"
+integer "0"
+integer "987654321"
+
+
+Test case 7
+
+Input ./tokenizer $(echo -e "hello\a\a\aworld")
+
+Expected Output
+
+Error: Escape Char [07]
+Error: Escape Char [07]
+Error: Escape Char [07]
+word "hello"
+word "world"
+
+Output:
+
+Error: Escape Char [07]
+Error: Escape Char [07]
+Error: Escape Char [07]
+word "hello"
+word "world"
+
+Test case 8
+
+Input ./tokenizer "+ += - -= == = /= *= * /"
+
+Expected Output
+
+plus "+"
+plus equals "+="
+minus "-"
+minus equals "-="
+comparative equals "=="
+assignment equals "="
+divide equals "/="
+multiply equals "*="
+multiply "*"
+divide "/"
+
+
+Output:
+
+plus "+"
+plus equals "+="
+minus "-"
+minus equals "-="
+comparative equals "=="
+assignment equals "="
+divide equals "/="
+multiply equals "*="
+multiply "*"
+divide "/"
+
+
+
+Test case 9
+Input  ./tokenizer "RuTgErS u n i v e r s i t y"
+
+Expected Output
+
+word "RuTgErS"
+word "u"
+word "n"
+word "i"
+word "v"
+word "e"
+word "r"
+word "s"
+word "i"
+word "t"
+word "y"
+
+Output:
+
+word "RuTgErS"
+word "u"
+word "n"
+word "i"
+word "v"
+word "e"
+word "r"
+word "s"
+word "i"
+word "t"
+word "y"
+
+
+
+Test case 10 
+
+Input ./tokenizer ""
+
+Expected Output
+No output
+
+Output:
+
+
+
+
+
+Test case 11
+Input ./tokenizer "& &= &&"
+
+Expected Output
+
+bitwise and "&"
+and assignment "&="
+logical and "&&"
+
+Output:
+
+bitwise and "&"
+and assignment "&="
+logical and "&&"
+
+
+
+Test case 12
+Input ./tokenizer "123.45e7 12," 
+
+Expected Output
+
+float "123.45e7"
+integer "12"
+comma ","
+
+Output:
+
+float "123.45e7"
+integer "12"
+comma ","
+
+
+
+
+
+Test case 13 
+Input ./tokenizer "if while return"
+
+Expected Output
+
+c- keyword "if"
+c- keyword "while"
+c- keyword "return"
+
+Output:
+
+c- keyword "if"
+c- keyword "while"
+c- keyword "return"
+
+
+
+
+
+Test case 14
+Input ./tokenizer "0x12 0xaf4 0x"
+
+Expected output
+
+hexidecimal "0x12"
+hexidecimal "0xaf4"
+integer "0"
+word "x"
+
+Output:
+
+hexidecimal "0x12"
+hexidecimal "0xaf4"
+integer "0"
+word "x"
+
+
